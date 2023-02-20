@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginasController;
+use App\Http\Controllers\TenisController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('tenis', TenisController::class);
+
+
+
 //Agregar todo a la misma ruta:
-Route::get('producto', [PaginasController::class, 'contacto']);
-Route::post('producto', [PaginasController::class, 'postContacto']);
+//Route::get('producto', [PaginasController::class, 'contacto']);
+//Route::post('producto', [PaginasController::class, 'postContacto']);

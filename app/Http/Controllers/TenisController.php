@@ -14,7 +14,10 @@ class TenisController extends Controller
      */
     public function index()
     {
-        //
+        $tenis = Tenis::get();
+
+        //dd($tenis);
+        return view('indexTenis', compact('tenis'));
     }
 
     /**
@@ -24,7 +27,7 @@ class TenisController extends Controller
      */
     public function create()
     {
-        //
+        return view('createTenis');
     }
 
     /**
@@ -35,7 +38,18 @@ class TenisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'modelo' => 'required|max:255',
+            'color' => 'required'
+        ]);
+
+        //dd($request->all);
+        $tenis = new Tenis();
+        $tenis->modelo = $request->modelo;
+        $tenis->color = $request->color;
+        $tenis->save();
+
+        return redirect('/tenis');
     }
 
     /**
