@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\TenisController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('tenis', TenisController::class);
-
+//Route::resource('tenis', TenisController::class);
+Route::resource('productos', ProductoController::class);
 
 
 //Agregar todo a la misma ruta:
