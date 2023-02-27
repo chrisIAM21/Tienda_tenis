@@ -7,13 +7,16 @@
     <title>Producto - Tenis</title>
 </head>
 <body>
-    <h1>Tenis</h1>
+    <h1>Listado de Tenis</h1>
+    <a href="\productos\create">Agregar tenis</a>
     <ul>
         @foreach ($productos as $producto)
             <li>
+                {{ $producto->id }}
                 {{ $producto->modelo }}
                 {{ $producto->color }}
                 {{ $producto->stock }}
+                <a href="productos\show\{{ $producto->id }}">Ver Detalle</a>
             </li>
         @endforeach
     </ul>
