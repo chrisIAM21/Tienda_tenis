@@ -59,7 +59,8 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
-        return view('show-producto');
+        //Retornamos la vista showProducto.blade.php
+        return view('showProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id} | El compact es para pasarle el producto
     }
 
     /**
@@ -70,7 +71,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('editProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id}/edit
     }
 
     /**
@@ -82,7 +83,18 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //
+        $request->validate([
+            'modelo' => 'required|max:255',
+            'color' => ['required', 'max:255'],
+            'stock' => ['required', 'numeric'],
+        ]);
+
+        $producto->modelo = $request->modelo;
+        $producto->color = $request->color;
+        $producto->stock = $request->stock;
+        $producto->save();
+
+        return redirect('/productos');
     }
 
     /**
@@ -93,6 +105,7 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+        return redirect('/productos');
     }
 }

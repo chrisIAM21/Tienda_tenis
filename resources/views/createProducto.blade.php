@@ -31,6 +31,7 @@
             @enderror
             <br>
             <button>Guardar</button>
+            <br><br><a href="\productos">Regresar a listado de tenis</a>
         </form>
 </body>
 </html>
