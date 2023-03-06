@@ -27,3 +27,12 @@ Route::resource('productos', ProductoController::class);
 //Agregar todo a la misma ruta:
 //Route::get('producto', [PaginasController::class, 'contacto']);
 //Route::post('producto', [PaginasController::class, 'postContacto']);
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
