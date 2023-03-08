@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PaginasController;
-use App\Http\Controllers\TenisController;
 use App\Http\Controllers\ProductoController;
 
 /*
