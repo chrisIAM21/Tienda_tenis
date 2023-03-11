@@ -10,22 +10,22 @@ d<!DOCTYPE html>
     <h1>Tenis</h1>
         <form action="\productos" method="POST">
             @csrf
-            <label for="modelo">Modelo</label>
-            <input type="text" name="modelo"><br>
-            @error('modelo')
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}"><br>
+            @error('nombre')
                 <h4>*{{$message}}</h4>
             @enderror
             <br>
 
             <label for="color">Color</label>
-            <input type="text" name="color"><br>
+            <input type="text" name="color" id="color" value="{{ old('color') }}"><br>
             @error('color')
                 <h4>*{{$message}}</h4>
             @enderror
             <br>
 
             <label for="stock">Stock disponible</label>
-            <input type="number" name="stock"><br>
+            <input type="number" name="stock" id="stock" value="{{ old('stock') }}"><br>
             @error('stock')
                 <h4>*{{$message}}</h4>
             @enderror

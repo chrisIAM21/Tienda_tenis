@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->text('modelo');
-            $table->text('color');
-            $table->integer('stock')->default(0);
-            //$table->timestamps();
+            $table->text('nombre', 255);
+            $table->text('color', 40);
+            $table->integer('stock', min(0))->default(0);
         });
     }
 

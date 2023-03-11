@@ -13,7 +13,7 @@
         @foreach ($productos as $producto)
             <li>
                 {{ $producto->id }}
-                {{ $producto->modelo }}
+                {{ $producto->nombre }}
                 {{ $producto->color }}
                 {{ $producto->stock }}
                 <a href="\productos\{{ $producto->id }}\edit">Editar</a>

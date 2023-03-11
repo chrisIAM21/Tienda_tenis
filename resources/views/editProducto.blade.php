@@ -11,9 +11,9 @@
         <form action="{{ route('productos.update', $producto) }}" method="POST">
             @csrf
             @method('PATCH')
-            <label for="modelo">Modelo</label>
-            <input type="text" name="modelo" id="modelo" value="{{ $producto->modelo }}"><br>
-            @error('modelo')
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="{{ $producto->nombre }}"><br>
+            @error('nombre')
                 <h4>*{{$message}}</h4>
             @enderror
             <br>
