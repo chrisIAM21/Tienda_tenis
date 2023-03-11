@@ -18,14 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::resource('tenis', TenisController::class);
 Route::resource('productos', ProductoController::class);
 
-
-//Agregar todo a la misma ruta:
-//Route::get('producto', [PaginasController::class, 'contacto']);
-//Route::post('producto', [PaginasController::class, 'postContacto']);
-Route::middleware([
+Route::middleware([ //Middleware para proteger las rutas, esto se creó cuando se ejecutó el comando php artisan make:auth
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
