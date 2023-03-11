@@ -12,19 +12,19 @@
             @csrf
             @method('PATCH')
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" value="{{ $producto->nombre }}"><br>
+            <input type="text" name="nombre" id="nombre" value="{{ old('nombre') ?? $producto->nombre }}"><br>
             @error('nombre')
                 <h4>*{{$message}}</h4>
             @enderror
             <br>
             <label for="color">Color</label>
-            <input type="text" name="color" id="color" value="{{ $producto->color }}"><br>
+            <input type="text" name="color" id="color" value="{{ old('color') ?? $producto->color }}"><br>
             @error('color')
                 <h4>*{{$message}}</h4>
             @enderror
             <br>
             <label for="stock">Stock disponible</label>
-            <input type="number" name="stock" id="stock" value="{{ $producto->stock }}"><br>
+            <input type="number" name="stock" id="stock" value="{{ old('stock') ?? $producto->stock }}"><br>
             @error('stock')
                 <h4>*{{$message}}</h4>
             @enderror
