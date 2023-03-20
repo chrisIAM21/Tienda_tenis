@@ -15,7 +15,7 @@ class ProductoController extends Controller
     public function index()
     {
         $productos = Producto::get();
-        return view('indexProducto', compact('productos')); // la ruta para ver en web sería: localhost:8000/productos
+        return view('productos.indexProducto', compact('productos')); // la ruta para ver en web sería: localhost:8000/productos
     }
 
     /**
@@ -25,7 +25,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view('createProducto'); // la ruta para ver en web sería: localhost:8000/productos/create
+        return view('productos.createProducto'); // la ruta para ver en web sería: localhost:8000/productos/create
     }
 
     /**
@@ -60,7 +60,7 @@ class ProductoController extends Controller
     public function show(Producto $producto)
     {
         //Retornamos la vista showProducto.blade.php
-        return view('showProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id} | El compact es para pasarle el producto
+        return view('productos.showProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id} | El compact es para pasarle el producto
     }
 
     /**
@@ -71,7 +71,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        return view('editProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id}/edit
+        return view('productos.editProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id}/edit
     }
 
     /**
@@ -106,7 +106,6 @@ class ProductoController extends Controller
     public function destroy(Producto $producto)
     {
         $producto->delete();
-        //return redirect('/productos');
         return redirect()->route('productos.index');
     }
 }

@@ -16,13 +16,8 @@
                 {{ $producto->nombre }}
                 {{ $producto->color }}
                 {{ $producto->stock }}
+                <a href="\productos\{{ $producto->id }}">Ver</a> | 
                 <a href="\productos\{{ $producto->id }}\edit">Editar</a>
-                <a href="\productos\{{ $producto->id }}">Ver</a>
-                <form action="\productos\{{ $producto->id }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button>¡ ELIMINAR !</button><br>
-                </form>
             </li>
         @endforeach
     </ul>

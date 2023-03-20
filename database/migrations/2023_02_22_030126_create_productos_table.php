@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text('nombre', 255);
             $table->text('color', 40);
-            $table->integer('stock', min(0))->default(0);
+            $table->integer('stock');
         });
     }
 
