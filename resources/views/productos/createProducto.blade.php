@@ -1,6 +1,5 @@
 <x-my-layout>
     <x-slot name="title">Agregar tenis</x-slot>
-    <h1>Agregar Tenis</h1>
         <form action="\productos" method="POST">
             @csrf
             <label for="nombre">Nombre</label>
