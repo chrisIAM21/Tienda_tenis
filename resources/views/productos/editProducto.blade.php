@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar</title>
-</head>
-<body>
+<x-layout>
+    <x-slot name="title">Editar producto {{ $producto->nombre }}</x-slot>
     <h1>Editar Producto</h1>
         <form action="{{ route('productos.update', $producto) }}" method="POST">
             @csrf
@@ -40,4 +33,4 @@
         </form>
         <br><hr><br><a href="{{ route('productos.index') }}">Regresar a listado de tenis</a>
 </body>
-</html>
+</x-layout>

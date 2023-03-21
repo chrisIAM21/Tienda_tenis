@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle-Producto</title>
-</head>
+<x-layout>
+<x-slot name="title">Detalles de producto {{ $producto->nombre }}</x-slot>
 <body>
     <h1>Detalles de producto</h1>
     <h2>Nombre: </h2><h3>{{ $producto->nombre }}</h3>
@@ -20,4 +14,4 @@
     </form>
     <br><br><a href="{{ route('productos.index') }}">Regresar a listado de tenis</a>
 </body>
-</html>
+</x-layout>

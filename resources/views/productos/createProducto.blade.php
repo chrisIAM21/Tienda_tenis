@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
-</head>
-<body>
-    <h1>Tenis</h1>
+<x-my-layout>
+    <x-slot name="title">Agregar tenis</x-slot>
+    <h1>Agregar Tenis</h1>
         <form action="\productos" method="POST">
             @csrf
             <label for="nombre">Nombre</label>
@@ -33,5 +26,4 @@
             <button>Guardar</button>
             <br><br><a href="\productos">Regresar a listado de tenis</a>
         </form>
-</body>
-</html>
+</x-my-layout>
