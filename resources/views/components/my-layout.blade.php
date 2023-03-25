@@ -43,20 +43,21 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
                 <div class="logo">
-                    <a href="#" class="simple-text logo-normal">
+                    <a href="/productos" class="simple-text logo-normal">
                         Look!
                     </a>
                 </div>
                 <div class="sidebar-wrapper" id="sidebar-wrapper">
                     <ul class="nav">
-                        <li class="active ">
-                            <a href="./dashboard.html">
+                        <!--<li class="active ">-->
+                        <li>
+                            <a href="/productos">
                                 <i class="now-ui-icons design_app"></i>
-                                <p>Inicio</p>
+                                <p>Lista de tenis</p>
                             </a>
                         </li>
                         <li>
-                            <a href="./icons.html">
+                            <a href="/productos/create">
                                 <i class="now-ui-icons education_atom"></i>
                                 <p>Agregar</p>
                             </a>
@@ -76,7 +77,8 @@
                                     <span class="navbar-toggler-bar bar3"></span>
                                 </button>
                             </div>
-                            <a class="navbar-brand" href="#">Administrador de productos</a>
+                            <p class="navbar-brand">Administrador de productos</p>
+                            <!--<a class="navbar-brand" href="#">Administrador de productos</a>-->
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-bar navbar-kebab"></span>

@@ -1,6 +1,5 @@
-<x-layout>
+<x-my-layout>
     <x-slot name="title">Editar producto {{ $producto->nombre }}</x-slot>
-    <h1>Editar Producto</h1>
         <form action="{{ route('productos.update', $producto) }}" method="POST">
             @csrf
             @method('PATCH')
@@ -33,4 +32,4 @@
         </form>
         <br><hr><br><a href="{{ route('productos.index') }}">Regresar a listado de tenis</a>
 </body>
-</x-layout>
+</x-my-layout>

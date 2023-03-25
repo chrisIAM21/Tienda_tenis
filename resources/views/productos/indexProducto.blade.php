@@ -1,7 +1,6 @@
-<x-layout>
+<x-my-layout>
 <x-slot name="title">Listado de Tenis</x-slot>
 <body>
-    <h1>Listado de Tenis</h1>
     <a href="\productos\create">Agregar tenis</a>
     <ul>
         @foreach ($productos as $producto)
@@ -16,4 +15,4 @@
         @endforeach
     </ul>
 </body>
-</x-layout>
+</x-my-layout>
