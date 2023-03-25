@@ -43,11 +43,8 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
                 <div class="logo">
-                    <a href="#" class="simple-text logo-mini">
-                        Tenis
-                    </a>
                     <a href="#" class="simple-text logo-normal">
-                        Chris
+                        Look!
                     </a>
                 </div>
                 <div class="sidebar-wrapper" id="sidebar-wrapper">
