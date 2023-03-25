@@ -50,18 +50,33 @@
                 <div class="sidebar-wrapper" id="sidebar-wrapper">
                     <ul class="nav">
                         <!--<li class="active ">-->
-                        <li>
+                        <!-- Si la ruta actual es 'productos.index', la clase de la lista pasará al estado 'active' -->
+                        <li class="{{ Route::currentRouteName() == 'productos.index' ? 'active' : '' }}">
                             <a href="/productos">
                                 <i class="now-ui-icons design_app"></i>
                                 <p>Lista de tenis</p>
                             </a>
                         </li>
-                        <li>
+                        <li class="{{ Route::currentRouteName() == 'productos.create' ? 'active' : '' }}">
                             <a href="/productos/create">
-                                <i class="now-ui-icons education_atom"></i>
+                                <i class="now-ui-icons ui-1_simple-add"></i>
                                 <p>Agregar</p>
                             </a>
                         </li>
+                        <!--    
+                        <li>
+                            <a href="/productos">
+                                <i class="now-ui-icons design_bullet-list-67"></i>
+                                <p>Lista de tenis</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/productos/create">
+                                <i class="now-ui-icons ui-1_simple-add"></i>
+                                <p>Agregar</p>
+                            </a>
+                        </li>
+                    -->
                     </ul>
                 </div>
             </div>
