@@ -3,9 +3,15 @@
         <form action="{{ route('productos.update', $producto) }}" method="POST">
             @csrf
             @method('PATCH')
-            <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre" value="{{ old('nombre') ?? $producto->nombre }}"><br>
-            @error('nombre')
+            <label for="marca">Marca: </label>
+            <input type="text" name="marca" id="marca" value="{{ old('marca') ?? $producto->marca }}"><br>
+            @error('marca')
+                <h4>*{{$message}}</h4>
+            @enderror
+            <br>
+            <label for="modelo">Modelo: </label>
+            <input type="text" name="modelo" id="modelo" value="{{ old('modelo') ?? $producto->modelo }}"><br>
+            @error('modelo')
                 <h4>*{{$message}}</h4>
             @enderror
             <br>

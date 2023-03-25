@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->text('nombre', 255);
+            $table->text('marca', 255);
+            $table->text('modelo', 255);
             $table->text('color', 40);
             $table->integer('stock');
         });

@@ -37,13 +37,15 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required|max:255',
+            'marca' => 'required|max:255',
+            'modelo' => 'required|max:255',
             'color' => ['required', 'max:40'],
             'stock' => 'required|numeric|min:0',
         ]);
 
         $producto = new Producto();
-        $producto->nombre = $request->nombre;
+        $producto->marca = $request->marca;
+        $producto->modelo = $request->modelo;
         $producto->color = $request->color;
         $producto->stock = $request->stock;
         $producto->save();
@@ -84,12 +86,14 @@ class ProductoController extends Controller
     public function update(Request $request, Producto $producto)
     {
         $request->validate([
-            'nombre' => 'required|max:255',
+            'marca' => 'required|max:255',
+            'modelo' => 'required|max:255',
             'color' => ['required', 'max:40'],
             'stock' => 'required|numeric|min:0',
         ]);
 
-        $producto->nombre = $request->nombre;
+        $producto->marca = $request->marca;
+        $producto->modelo = $request->modelo;
         $producto->color = $request->color;
         $producto->stock = $request->stock;
         $producto->save();

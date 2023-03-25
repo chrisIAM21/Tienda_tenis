@@ -53,7 +53,7 @@
                         <!-- Si la ruta actual es 'productos.index', la clase de la lista pasará al estado 'active' -->
                         <li class="{{ Route::currentRouteName() == 'productos.index' ? 'active' : '' }}">
                             <a href="/productos">
-                                <i class="now-ui-icons design_app"></i>
+                                <i class="now-ui-icons design_bullet-list-67"></i>
                                 <p>Lista de tenis</p>
                             </a>
                         </li>
@@ -104,6 +104,15 @@
                             
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                    <!-- Si el usuario está autenticado, se mostrará el nombre del usuario -->
+                                    <!--
+                                    @auth
+                                        <a class="nav-link" href="/dashboard">
+                                            <i class="now-ui-icons users_single-02"></i>
+                                            <p>{{ Auth::user()->name }}</p>
+                                        </a>
+                                    @endauth-->
+
                                     <a class="nav-link" href="/login">
                                         <i class="now-ui-icons users_single-02"></i>
                                         <p>Iniciar sesión</p>
@@ -147,9 +156,12 @@
                 <footer class="footer">
                     <div class=" container-fluid ">
                         <div class="copyright" id="copyright">
-                            &copy; <script>
+                            &copy; <!--<script>
                                 document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.-->
+                            <script>
+                                document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                            </script>, Diseñado por Christopher Andrade.
                         </div>
                     </div>
                 </footer>
