@@ -43,8 +43,7 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
                 <div class="logo">
-                    <a href="/productos" class="simple-text logo-normal">
-                        Look!
+                    <a href="/productos"><img src="/my-layout/assets/img/Look_Logo.jpg" alt="Look!" width="150px">
                     </a>
                 </div>
                 <div class="sidebar-wrapper" id="sidebar-wrapper">
