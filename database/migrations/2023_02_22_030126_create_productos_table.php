@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('modelo', 255);
             $table->text('color', 40);
             $table->integer('stock');
+            $table->softDeletes();
         });
     }
 
