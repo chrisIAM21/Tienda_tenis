@@ -15,7 +15,6 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 -->
-<!-- To add the content in this layout, we need top add {{ $slot }} in the body tag, in this case in line 40 -->
     <!DOCTYPE html>
     <html lang="en">
 
@@ -34,6 +33,8 @@
         <link href="/my-layout/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
         <!-- CSS Just for demo purpose, don't include it in your project -->
         <link href="/my-layout/assets/demo/demo.css" rel="stylesheet" />
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
     <body class="">
@@ -129,6 +130,32 @@
                                             <!--<span class="d-lg-none d-md-block">Usuario</span>
                                         </p>-->
                                     </a>
+                                </li>
+                                <!-- Método para cerrar sesión -->
+                                <!--
+                                <li>
+                                    <a class="nav-link">
+                                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        <form method="POST" action="{{ route('logout') }}" x-data>
+                                            @csrf
+                                            <x-dropdown-link href="{{ route('logout') }}"
+                                                        @click.prevent="$root.submit();">
+                                                {{ __('Log Out') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </a>
+                                </li>
+                            -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        <p>Cerrar sesión</p>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                                 </li>
                             </ul>
                         </div>
