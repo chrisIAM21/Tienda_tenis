@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -12,9 +13,10 @@ class ProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): View
     {
         $productos = Producto::get();
+        //$productos = Producto::withTrashed()->get(); // Con esto podemos ver los productos eliminados
         return view('productos.indexProducto', compact('productos')); // la ruta para ver en web sería: localhost:8000/productos
     }
 
