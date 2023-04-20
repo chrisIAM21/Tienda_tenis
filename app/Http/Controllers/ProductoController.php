@@ -49,12 +49,16 @@ class ProductoController extends Controller
             'stock' => 'required|numeric|min:0',
         ]);
 
+        /*
         $producto = new Producto();
         $producto->marca = $request->marca;
         $producto->modelo = $request->modelo;
         $producto->color = $request->color;
         $producto->stock = $request->stock;
         $producto->save();
+        */
+
+        Producto::create($request->all());
 
         return redirect('/productos');
     }
@@ -97,12 +101,15 @@ class ProductoController extends Controller
             'color' => ['required', 'max:40'],
             'stock' => 'required|numeric|min:0',
         ]);
-
+        /*
         $producto->marca = $request->marca;
         $producto->modelo = $request->modelo;
         $producto->color = $request->color;
         $producto->stock = $request->stock;
         $producto->save();
+        */
+        $producto::where('id', $producto->id)
+            ->update($request->except('_token', '_method'));
 
         return redirect('/productos');
     }
