@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Producto extends Model
+class Categoria extends Model
 {
     use HasFactory;
-    use SoftDeletes;
     public $timestamps = false;
-    protected $fillable = ['marca', 'modelo', 'color', 'stock'];
+    use softDeletes;
+    protected $fillable = ['nombre'];
 
-    public function categorias()
+    public function productos()
     {
-        return $this->belongsToMany(Categoria::class);
+        return $this->belongsToMany(Producto::class);
     }
 }

@@ -1,9 +1,6 @@
 <x-my-layout>
 <x-slot name="title">Listado de Tenis</x-slot>
-<body>
-    <a href="\productos\create">Agregar tenis</a>
-    <br><br>
-    
+<body>    
     <ul>
         <p>ID | Marca | Modelo | Color | Stock</p>
         @foreach ($productos as $producto)

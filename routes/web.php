@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\CategoriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,8 @@ Route::middleware([ //Middleware para proteger las rutas, esto se creó cuando s
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::resource('categorias', CategoriaController::class);
+
+# Ruta para poder seleccionar y enlazar los productos a una categoria específica (el método en el controlador es public function agregarProductos(Request $request, Categoria $categoria))
+Route::post('categorias/{categoria}/agregarProductos', [CategoriaController::class, 'agregarProductos'])->name('categorias.agregarProductos');
