@@ -59,14 +59,16 @@
                     <nav
                         class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                         <div class="container-fluid px-0">
-                            <a class="navbar-brand font-weight-bolder ms-sm-3" href="#" rel="tooltip" title="Look!" data-placement="bottom" target="_blank">
+                            <a class="navbar-brand font-weight-bolder ms-sm-3" href="#" rel="tooltip"
+                                title="Look!" data-placement="bottom" target="_blank">
 
-                              <img src="my-layout/assets/img/Look_Logo_Nuevo_870x250.png" style="max-width: 160px; max-height: 70px;">
+                                <img src="my-layout/assets/img/Look_Logo_Nuevo_870x250.png"
+                                    style="max-width: 160px; max-height: 70px;">
                             </a>
                             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
                                 aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon mt-2"> 
+                                <span class="navbar-toggler-icon mt-2">
                                     <span class="navbar-toggler-bar bar1"></span>
                                     <span class="navbar-toggler-bar bar2"></span>
                                     <span class="navbar-toggler-bar bar3"></span>
@@ -76,23 +78,37 @@
                                 <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
 
                                     <li class="nav-item dropdown dropdown-hover mx-2">
-                                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                            href="javascript:;" id="dropdownMenuBlocks" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
+                                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="javascript:;" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
                                             Categorías
-                                            <img src="layout-inicio/assets/img/down-arrow-dark.svg" alt="down-arrow"
-                                                class="arrow ms-1" />
+                                            <img src="layout-inicio/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1" />
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
                                             aria-labelledby="dropdownMenuBlocks">
                                             <div class="d-none d-lg-block">
+                                                <!-- Botón para mostrar todo el catálogo -->
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                    <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                        href="#"> <!-- Enlace -->
+                                                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
+                                                      <div class="d-flex">
+                                                          <div class="icon h-10 me-3 d-flex mt-1">
+                                                          </div>
+                                                          <div
+                                                              class="w-100 d-flex align-items-center justify-content-between">
+                                                              <div>
+                                                                  <h6
+                                                                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                      Mostrar todo el catálogo</h6>
+                                                                  <span class="text-sm">Encuentra lo que buscas</span>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </a>
+                                              </li>
+
+
+                                                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
                                                         <div class="d-flex">
                                                             <div class="icon h-10 me-3 d-flex mt-1">
-                                                                <i
-                                                                    class="ni ni-single-copy-04 text-gradient text-primary"></i>
                                                             </div>
                                                             <div
                                                                 class="w-100 d-flex align-items-center justify-content-between">
@@ -121,56 +137,66 @@
                                                 </li>
 
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                  <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                      href="#">
-                                                      <div class="d-flex">
-                                                          <div class="icon h-10 me-3 d-flex mt-1">
-                                                              <i
-                                                                  class="ni ni-single-copy-04 text-gradient text-primary"></i>
-                                                          </div>
-                                                          <div
-                                                              class="w-100 d-flex align-items-center justify-content-between">
-                                                              <div>
-                                                                  <h6
-                                                                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                      Deportes</h6>
-                                                                  <span class="text-sm">Encuentra lo que buscas</span>
-                                                              </div>
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                                                        <div class="d-flex">
+                                                            <div class="icon h-10 me-3 d-flex mt-1">
+                                                            </div>
+                                                            <div
+                                                                class="w-100 d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Deportes</h6>
+                                                                    <span class="text-sm">Encuentra lo que buscas</span>
+                                                                </div>
 
-                                                              <img src="layout-inicio/assets/img/down-arrow.svg"
-                                                                  alt="down-arrow" class="arrow">
-                                                          </div>
-                                                      </div>
-                                                  </a>
-                                                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                                                      <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                          href="#">
-                                                          Futbol
-                                                      </a>
-                                                      <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                          href="#">
-                                                          Basketball
-                                                      </a>
-                                                  </div>
-                                              </li>
+                                                                <img src="layout-inicio/assets/img/down-arrow.svg"
+                                                                    alt="down-arrow" class="arrow">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                        <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                            href="#">
+                                                            Futbol
+                                                        </a>
+                                                        <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                            href="#">
+                                                            Basketball
+                                                        </a>
+                                                    </div>
+                                                </li>
 
                                             </div>
 
                                             <!-- Menu mobile -->
-                                            
+
                                             <div class="row d-lg-none">
                                                 <div class="col-md-12">
-                                                    <div class="d-flex mb-2">
-                                                        <div class="icon h-10 me-3 d-flex mt-1">
-                                                            <i
-                                                                class="ni ni-single-copy-04 text-gradient text-primary"></i>
+                                                  <div class="d-flex mb-2">
+                                                    
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Mostrar todo el catálogo</h6>
+                                                          </a>
                                                         </div>
+                                                    </div>
+                                                </div>
+
+                                                    <div class="d-flex mb-2">
+                                                        
                                                         <div
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
+                                                              <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
                                                                 <h6
                                                                     class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
                                                                     Deportes</h6>
+                                                              </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -184,15 +210,14 @@
                                                     </a>
 
                                                     <div class="d-flex mb-2 mt-3">
-                                                        <div class="icon h-10 me-3 d-flex mt-1">
-                                                            <i class="ni ni-laptop text-gradient text-primary"></i>
-                                                        </div>
                                                         <div
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
+                                                              <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
                                                                 <h6
                                                                     class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
                                                                     Género</h6>
+                                                              </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -211,24 +236,73 @@
 
                                                 </div>
                                             </div>
+                                            <!-- Fin menu mobile -->
                                         </ul>
                                     </li>
 
-                                    <li class="nav-item mx-2">
-                                      <a class="nav-link nav-link-icon me-2" href="#">
-                                        <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip" data-bs-placement="bottom">Catálogo completo</p>
-                                      </a>
-                                    </li>
-                                    
+                                    <!-- si el usuario está autenticado, se mostrará el carrito de compras -->
+                                    @auth
+                                        <li class="nav-item mx-2">
+                                            <a class="nav-link nav-link-icon me-2" href="#">
+                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip" data-bs-placement="bottom">Carrito</p>
+                                            </a>
+                                        </li>
+                                    @endauth
+
+                                    <!-- si el usuario está autenticado, se mostrará la opción para editar productos -->
+                                    @auth
+                                        <li class="nav-item mx-2">
+                                            <a class="nav-link nav-link-icon me-2" href="{{ route('productos.index') }}">
+                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip" data-bs-placement="bottom">Aministrar productos</p>
+                                            </a>
+                                        </li>
+                                    @endauth
+
                                     <li class="nav-item my-auto ms-3 ms-lg-auto">
-                                        <a href="#"
-                                            class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0">Registrate</a>
+                                        <!-- Si el usuario ya está autenticado, se mostrará la opción de cerrar sesión, sino, se muestra la opción de Registrarse -->
+                                        @if (Route::has('login'))
+                                            @auth
+                                                <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                    href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                    Cerrar sesión
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    class="d-none">
+                                                    @csrf
+                                                </form>
+                                            @else
+                                                <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                    href="/register">
+                                                    <i class="now-ui-icons"><svg fill="none" stroke="currentColor"
+                                                            stroke-width="1.5" viewBox="0 0 16 21"
+                                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            height="16" width="21">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z">
+                                                            </path>
+                                                        </svg></i>
+                                                    Registrate
+                                                </a>
+                                            @endauth
+                                        @endif
                                     </li>
                                     <li class="nav-item my-auto ms-3 ms-lg-0">
-
-                                        <a href="#"
-                                            class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Inicia sesión</a>
-
+                                        <!-- Si el usuario está autenticado, se mostrará el nombre del usuario en el menú de navegación -->
+                                        @if (Route::has('login'))
+                                            @auth
+                                                <a class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                    href="/user/profile">
+                                                    {{ Auth::user()->name }}
+                                                </a>
+                                            @else
+                                                <a class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                    href="/login">
+                                                    Iniciar sesión
+                                                </a>
+                                            @endauth
+                                        @endif
                                     </li>
                                 </ul>
                             </div>

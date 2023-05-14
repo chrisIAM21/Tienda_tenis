@@ -5,7 +5,7 @@
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+            {{ __('¿Olvidaste tu contraseña? No hay problema. Solo dinos tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña que te permitirá elegir una nueva.') }}
         </div>
 
         @if (session('status'))
@@ -28,6 +28,10 @@
                 <x-button>
                     {{ __('Email Password Reset Link') }}
                 </x-button>
+            </div>
+            <!-- Botón de regreso al log in -->
+            <div class="flex items-center justify-end mt-4">
+                <a href="{{ route('login') }}" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Regresar al login</a>
             </div>
         </form>
     </x-authentication-card>

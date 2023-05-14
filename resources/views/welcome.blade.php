@@ -64,15 +64,15 @@
                                 </div>
                                 <div class="col-lg-2 col-4">
                                     <img src="layout-inicio/assets/img/inicio/nike_logo.png" class="img-fluid"
-                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Comming soon">
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nike">
                                 </div>
                                 <div class="col-lg-2 col-4">
                                     <img src="layout-inicio/assets/img/inicio/Puma-Logo.png" class="img-fluid"
-                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Comming soon">
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Puma">
                                 </div>
                                 <div class="col-lg-2 col-4">
                                     <img src="layout-inicio/assets/img/inicio/under_armour_logo.png" class="img-fluid"
-                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Comming soon">
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Under Armour">
                                 </div>
                             </div>
                         </div>
