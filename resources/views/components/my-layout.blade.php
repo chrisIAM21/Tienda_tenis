@@ -202,11 +202,11 @@
                     <canvas id="bigDashboardChart"></canvas>
                 </div>
                 <div class="content">
-                    <!--<div class="row">-->
+                    <div class="row">
                         <div class="col-md-12">
-                            <div class="card  card-tasks">
+                            <div class="card">
                                 <div class="card-header ">
-                                    <h2 class="card-title">{{ $title }}</h2>
+                                    <h1 class="card-title">{{ $title }}</h1>
                                 </div>
                                 <div class="card-body ">
                                     {{ $slot }}
