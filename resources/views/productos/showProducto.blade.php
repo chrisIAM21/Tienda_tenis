@@ -1,24 +1,28 @@
-<x-my-layout>
-    <x-slot name="title">Detalles de producto {{ $producto->nombre }}</x-slot>
-
-    <body>
-        
-        <h3>Marca: </h3>
-        <h4>{{ $producto->marca }}</h4>
-        <h3>Modelo: </h3>
-        <h4>{{ $producto->modelo }}</h4>
-        <h3>Color: </h3>
-        <h4>{{ $producto->color }}</h4>
-        <h3>En stock: </h3>
-        <h4>{{ $producto->stock }}</h4>
+    <x-admin-layout>
+        <x-slot name="title">Detalles de tenis: {{ $producto->modelo }}</x-slot>
+        <x-slot name="breadcrumbs">
+            <?php
+            $currentPage = basename($_SERVER['PHP_SELF']);
+            echo '<li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/">Inicio</a></li>';
+            echo '<li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/productos">Productos</a></li>';
+            echo '<li class="breadcrumb-item text-sm text-dark active" aria-current="page">' . ucfirst(str_replace('.php', '', $currentPage)) . '</li>';
+            ?>
+        </x-slot>
+        <div class="card-body px-5 pt-2 pb-2">
+        <h5>Marca: </h5>
+        <h6>{{ $producto->marca }}</h6>
+        <h5>Modelo: </h5>
+        <h6>{{ $producto->modelo }}</h6>
+        <h5>Color: </h5>
+        <h6>{{ $producto->color }}</h6>
+        <h5>En stock: </h5>
+        <h6>{{ $producto->stock }}</h6>
         <hr>
-        <a href="\productos\{{ $producto->id }}\edit">Editar producto</a>
+        <a class="btn btn-white btn-sm w-20 mb-0" href="\productos\{{ $producto->id }}\edit">Editar producto</a>
         <br><br>
         <form action="{{ route('productos.destroy', $producto) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit">ELIMINAR PRODUCTO</button>
+            <button class="btn btn-white btn-sm w-20 mb-0" type="submit" style="color: red;">ELIMINAR PRODUCTO</button>
         </form>
-        <br><a href="{{ route('productos.index') }}">Regresar a listado de tenis</a>
-    </body>
-</x-my-layout>
+</x-admin-layout>
