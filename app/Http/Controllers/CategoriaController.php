@@ -44,7 +44,7 @@ class CategoriaController extends Controller
 
         Categoria::create($request->all());
 
-        return redirect('/categorias/create')->with('mensaje', 'Categoria creada con éxito!');
+        return redirect('/categorias')->with('mensaje', 'Categoria creada con éxito!');
     }
 
     /**
@@ -104,6 +104,12 @@ class CategoriaController extends Controller
     public function agregarProductos(Request $request, Categoria $categoria)
     {
         $categoria->productos()->attach($request->producto_id);
+        return redirect()->route('categorias.show', $categoria);
+    }
+
+    public function quitarProductos(Request $request, Categoria $categoria)
+    {
+        $categoria->productos()->detach($request->producto_id);
         return redirect()->route('categorias.show', $categoria);
     }
 }

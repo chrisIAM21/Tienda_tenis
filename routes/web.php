@@ -32,6 +32,7 @@ Route::middleware([ //Middleware para proteger las rutas, esto se creó cuando s
 });
 
 Route::resource('categorias', CategoriaController::class);
+Route::delete('/categorias/{categoria}/quitar-productos', [CategoriaController::class, 'quitarProductos'])->name('categorias.quitarProductos');
 
 # Ruta para poder seleccionar y enlazar los productos a una categoria específica (el método en el controlador es public function agregarProductos(Request $request, Categoria $categoria))
 Route::post('categorias/{categoria}/agregarProductos', [CategoriaController::class, 'agregarProductos'])->name('categorias.agregarProductos');

@@ -3844,7 +3844,7 @@ fieldset:disabled .btn {
 .btn-white {
   --bs-btn-color: #000;
   --bs-btn-bg: #fff;
-  --bs-btn-border-color: #fff;
+  --bs-btn-border-color: rgb(47, 47, 47)000;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: white;
   --bs-btn-hover-border-color: white;
@@ -4053,7 +4053,7 @@ fieldset:disabled .btn {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 2rem;
   --bs-btn-font-size: 0.75rem;
-  --bs-btn-border-radius: 0.5rem;
+  --bs-btn-border-radius: 1rem;
 }
 
 .fade {

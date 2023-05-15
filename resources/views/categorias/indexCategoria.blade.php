@@ -1,18 +1,48 @@
-<x-my-layout>
-<x-slot name="title">Categorias</x-slot>
-<body>
-    <a href="\categorias\create">Agregar categoria</a>
-    <br><br>
-    
-    <ul>
-        @foreach ($categorias as $categoria)
-            <li>
-                {{ $categoria->id }} |
-                {{ $categoria->nombre }} |
-                <a href="\categorias\{{ $categoria->id }}">Ver</a> | 
-                <a href="\categorias\{{ $categoria->id }}\edit">Editar</a>
-            </li>
-        @endforeach
-    </ul>
-</body>
-</x-my-layout>
+<x-admin-layout>
+    <x-slot name="title">Listado de Categorías</x-slot>
+    <x-slot name="breadcrumbs">
+        <?php
+        $currentPage = basename($_SERVER['PHP_SELF']);
+        echo '<li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/">Inicio</a></li>';
+        echo '<li class="breadcrumb-item text-sm text-dark active" aria-current="page">' . ucfirst(str_replace('.php', '', $currentPage)) . '</li>';
+        ?>
+    </x-slot>
+    <div class="card-body px-0 pt-0 pb-2">
+        <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+                <thead>
+                    <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            ID</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                            Nombre</th>
+                        <th class="text-secondary opacity-7"></th>
+                        <th class="text-secondary opacity-7"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($categorias as $categoria)
+                        <tr>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold ps-3">{{ $categoria->id }}</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">{{ $categoria->nombre }}</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold"><a
+                                        href="\categorias\{{ $categoria->id }}">Ver</a></span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold"><a
+                                        href="\categorias\{{ $categoria->id }}/edit">Editar</a></span>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <a href={{ route('categorias.create')}} class="btn btn-outline-secondary btn-sm w-20 m-4">Agregar Categoría Nueva</a>
+        </div>
+        
+    </div>
+</x-admin-layout>

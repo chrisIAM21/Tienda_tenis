@@ -22,6 +22,8 @@
                             Color</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                             Stock</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                            Categorías</th>
                         <th class="text-secondary opacity-7"></th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
@@ -30,7 +32,7 @@
                     @foreach ($productos as $producto)
                         <tr>
                             <td>
-                                <span class="text-secondary text-xs font-weight-bold">{{ $producto->id }}</span>
+                                <span class="text-secondary text-xs font-weight-bold ps-3">{{ $producto->id }}</span>
                             </td>
                             <td>
                                 <span class="text-secondary text-xs font-weight-bold">{{ $producto->marca }}</span>
@@ -45,6 +47,14 @@
                                 <span class="text-secondary text-xs font-weight-bold">{{ $producto->stock }}</span>
                             </td>
                             <td>
+                                @if ($producto->categoria)
+                                    <span
+                                        class="text-secondary text-xs font-weight-bold">{{ $producto->categoria->nombre }}</span>
+                                @else
+                                    <span class="text-secondary text-xs font-weight-bold">N/A</span>
+                                @endif
+                            </td>
+                            <td>
                                 <span class="text-secondary text-xs font-weight-bold"><a
                                         href="\productos\{{ $producto->id }}">Ver</a></span>
                             </td>
@@ -57,6 +67,8 @@
                 </tbody>
             </table>
         </div>
+        <a href={{ route('productos.create') }} class="btn btn-outline-secondary btn-sm w-20 m-4">Agregar Producto
+            Nuevo</a>
     </div>
 
 </x-admin-layout>
