@@ -78,35 +78,39 @@
                                 <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
 
                                     <li class="nav-item dropdown dropdown-hover mx-2">
-                                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="javascript:;" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                            href="javascript:;" id="dropdownMenuBlocks" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                             Categorías
-                                            <img src="layout-inicio/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1" />
+                                            <img src="layout-inicio/assets/img/down-arrow-dark.svg" alt="down-arrow"
+                                                class="arrow ms-1" />
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
                                             aria-labelledby="dropdownMenuBlocks">
                                             <div class="d-none d-lg-block">
                                                 <!-- Botón para mostrar todo el catálogo -->
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
-                                                      <div class="d-flex">
-                                                          <div class="icon h-10 me-3 d-flex mt-1">
-                                                          </div>
-                                                          <div
-                                                              class="w-100 d-flex align-items-center justify-content-between">
-                                                              <div>
-                                                                  <h6
-                                                                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                      Mostrar todo el catálogo</h6>
-                                                                  <span class="text-sm">Encuentra lo que buscas</span>
-                                                              </div>
-                                                          </div>
-                                                      </div>
-                                                  </a>
-                                              </li>
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                                                        <!-- Enlace -->
+                                                        <div class="d-flex">
+                                                            <div class="icon h-10 me-3 d-flex mt-1">
+                                                            </div>
+                                                            <div class="w-100 d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Mostrar todo el catálogo</h6>
+                                                                    <span class="text-sm">Encuentra lo que buscas</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
 
 
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                                                        <!-- Enlace -->
                                                         <div class="d-flex">
                                                             <div class="icon h-10 me-3 d-flex mt-1">
                                                             </div>
@@ -173,30 +177,34 @@
 
                                             <div class="row d-lg-none">
                                                 <div class="col-md-12">
-                                                  <div class="d-flex mb-2">
-                                                    
-                                                    <div
-                                                        class="w-100 d-flex align-items-center justify-content-between">
-                                                        <div>
-                                                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
-                                                            <h6
-                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                Mostrar todo el catálogo</h6>
-                                                          </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
                                                     <div class="d-flex mb-2">
-                                                        
+
                                                         <div
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
-                                                              <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
-                                                                <h6
-                                                                    class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                    Deportes</h6>
-                                                              </a>
+                                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                                    href="#">
+                                                                    <!-- Enlace -->
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Mostrar todo el catálogo</h6>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="d-flex mb-2">
+
+                                                        <div
+                                                            class="w-100 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                                    href="#">
+                                                                    <!-- Enlace -->
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Deportes</h6>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -213,11 +221,13 @@
                                                         <div
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
-                                                              <a class="dropdown-item py-2 ps-3 border-radius-md" href="#"><!-- Enlace -->
-                                                                <h6
-                                                                    class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                    Género</h6>
-                                                              </a>
+                                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                                    href="#">
+                                                                    <!-- Enlace -->
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Género</h6>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -244,7 +254,8 @@
                                     @auth
                                         <li class="nav-item mx-2">
                                             <a class="nav-link nav-link-icon me-2" href="#">
-                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip" data-bs-placement="bottom">Carrito</p>
+                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom">Carrito</p>
                                             </a>
                                         </li>
                                     @endauth
@@ -253,13 +264,14 @@
                                     @auth
                                         <li class="nav-item mx-2">
                                             <a class="nav-link nav-link-icon me-2" href="{{ route('productos.index') }}">
-                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip" data-bs-placement="bottom">Aministrar productos</p>
+                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom">Aministrar productos</p>
                                             </a>
                                         </li>
                                     @endauth
 
                                     <li class="nav-item my-auto ms-3 ms-lg-auto">
-                                        <!-- Si el usuario ya está autenticado, se mostrará la opción de cerrar sesión, sino, se muestra la opción de Registrarse -->
+                                        {{-- <!-- Si el usuario ya está autenticado, se mostrará la opción de cerrar sesión, sino, se muestra la opción de Registrarse -->
                                         @if (Route::has('login'))
                                             @auth
                                                 <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
@@ -272,7 +284,9 @@
                                                     class="d-none">
                                                     @csrf
                                                 </form>
-                                            @else
+                                            @else --}}                                        
+                                        @if (!Route::has('login'))
+                                            @auth
                                                 <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
                                                     href="/register">
                                                     <i class="now-ui-icons"><svg fill="none" stroke="currentColor"
@@ -288,7 +302,8 @@
                                             @endauth
                                         @endif
                                     </li>
-                                    <li class="nav-item my-auto ms-3 ms-lg-0">
+
+                                    {{-- <li class="nav-item my-auto ms-3 ms-lg-0">
                                         <!-- Si el usuario está autenticado, se mostrará el nombre del usuario en el menú de navegación -->
                                         @if (Route::has('login'))
                                             @auth
@@ -303,7 +318,67 @@
                                                 </a>
                                             @endauth
                                         @endif
+                                    </li> --}}
+
+                                    <li class="nav-item my-auto ms-3 ms-lg-0">
+                                        <!-- Si el usuario está autenticado, se mostrará el nombre del usuario en el menú de navegación -->
+                                        @if (Route::has('login'))
+                                            @auth
+                                                <div class="dropdown">
+                                                    <a href="javascript:;" class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-user me-sm-1"></i>
+                                                        <span>{{ Auth::user()->name }}</span>
+                                                        <img src="layout-inicio/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1" />
+                                                    </a>
+                                    
+                                                    <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                                                        aria-labelledby="dropdownMenuButton">
+                                                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                            <a class="dropdown-item py-2 ps-3 border-radius-md" href="/user/profile">
+                                                                <div class="d-flex py-1">
+                                                                    <div class="my-auto">
+                                                                        <img src="/admin-layout/assets/img/team-2.jpg" class="avatar avatar-sm me-3">
+                                                                    </div>
+                                                                    <div class="d-flex flex-column justify-content-center">
+                                                                        <h6 class="text-sm font-weight-normal mb-1">
+                                                                            <span class="font-weight-bold">Perfil</span>
+                                                                        </h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="mb-2">
+                                                            <a class="dropdown-item border-radius-md" href="{{ route('logout') }}"
+                                                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                                                <div class="d-flex py-1">
+                                                                    <div class="d-flex flex-column justify-content-center">
+                                                                        <h6 class="text-sm font-weight-normal mb-1">
+                                                                            <span class="font-weight-bold">Cerrar sesión</span>
+                                                                        </h6>
+                                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                                            class="d-none">
+                                                                            @csrf
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            @else
+                                                <a class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0" href="/login">
+                                                    <i class="fa fa-user me-sm-1"></i>
+                                                    <span>Iniciar sesión</span>
+                                                </a>
+                                            @endauth
+                                        @endif
                                     </li>
+
+
+
+
+
                                 </ul>
                             </div>
                         </div>
