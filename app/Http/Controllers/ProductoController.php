@@ -17,11 +17,17 @@ class ProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function index(): View
+    // {
+    //     $productos = Producto::get();
+    //     //$productos = Producto::withTrashed()->get(); // Con esto podemos ver los productos eliminados
+    //     return view('productos.indexProducto', compact('productos')); // la ruta para ver en web sería: localhost:8000/productos
+    // }
+    /* Modificamos el método index para que muestre las categorias asociadas a cada producto usando with */
     public function index(): View
     {
-        $productos = Producto::get();
-        //$productos = Producto::withTrashed()->get(); // Con esto podemos ver los productos eliminados
-        return view('productos.indexProducto', compact('productos')); // la ruta para ver en web sería: localhost:8000/productos
+        $productos = Producto::with('categorias')->get();
+        return view('productos.indexProducto', compact('productos'));
     }
 
     /**
@@ -60,7 +66,7 @@ class ProductoController extends Controller
 
         Producto::create($request->all());
 
-        return redirect('/productos');
+        return redirect()->route('productos.create')->with('producto', 'creado');
     }
 
     /**
@@ -111,7 +117,8 @@ class ProductoController extends Controller
         $producto::where('id', $producto->id)
             ->update($request->except('_token', '_method'));
 
-        return redirect('/productos');
+        return redirect()->route('productos.edit', $producto)->with('exito', 'editado');
+        // return redirect()->route('productos.edit', $producto)->with('exito');
     }
 
     /**
@@ -123,6 +130,7 @@ class ProductoController extends Controller
     public function destroy(Producto $producto)
     {
         $producto->delete();
-        return redirect()->route('productos.index');
+        // redirige a la ruta productos.index despues de mostrar el mensaje
+        return redirect()->route('productos.index')->with('producto', 'eliminado');
     }
 }

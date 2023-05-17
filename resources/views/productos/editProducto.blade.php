@@ -14,29 +14,44 @@
             @csrf
             @method('PATCH')
             <label for="marca">Marca: </label>
-            <input class="form-control w-30" type="text" name="marca" id="marca" value="{{ old('marca') ?? $producto->marca }}"><br>
+            <input class="form-control w-30" type="text" name="marca" id="marca"
+                value="{{ old('marca') ?? $producto->marca }}"><br>
             @error('marca')
                 <h4>*{{ $message }}</h4>
             @enderror
             <br>
             <label for="modelo">Modelo: </label>
-            <input class="form-control w-30" type="text" name="modelo" id="modelo" value="{{ old('modelo') ?? $producto->modelo }}"><br>
+            <input class="form-control w-30" type="text" name="modelo" id="modelo"
+                value="{{ old('modelo') ?? $producto->modelo }}"><br>
             @error('modelo')
                 <h4>*{{ $message }}</h4>
             @enderror
             <br>
             <label for="color">Color: </label>
-            <input class="form-control w-30" type="text" name="color" id="color" value="{{ old('color') ?? $producto->color }}"><br>
+            <input class="form-control w-30" type="text" name="color" id="color"
+                value="{{ old('color') ?? $producto->color }}"><br>
             @error('color')
                 <h4>*{{ $message }}</h4>
             @enderror
             <br>
             <label for="stock">Stock disponible: </label>
-            <input class="form-control w-30" type="number" name="stock" id="stock" value="{{ old('stock') ?? $producto->stock }}"><br>
+            <input class="form-control w-30" type="number" name="stock" id="stock"
+                value="{{ old('stock') ?? $producto->stock }}"><br>
             @error('stock')
                 <h4>*{{ $message }}</h4>
             @enderror
             <br>
+            <!-- Mensaje de éxito con sweetalert2 -->
+            @if (session('exito')=='editado')
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Producto editado correctamente',
+                        showConfirmButton: false,
+                        timer: 3000
+                    })
+                </script>
+            @endif
             <button class="btn btn-white btn-sm w-20 mb-0">Guardar cambios</button>
 
         </form>

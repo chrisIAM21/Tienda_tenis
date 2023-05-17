@@ -17,7 +17,7 @@
                     </x-nav-link>
 
                     <x-nav-link href="/productos" :active="request()->routeIs('productos')">
-                        {{ __('Lista de Productos') }}
+                        {{ __('Administrar Productos') }}
                     </x-nav-link>
                 </div>
             </div>
