@@ -17,4 +17,32 @@ class Producto extends Model
     {
         return $this->belongsToMany(Categoria::class);
     }
+    
+    // Accessors
+    public function getMarcaAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    public function getModeloAttribute($value)
+    {
+        return strtoupper($value);
+    }
+    public function getColorAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    
+    // Mutators
+    public function setMarcaAttribute($value)
+    {
+        $this->attributes['marca'] = ucfirst($value);
+    }
+    public function setModeloAttribute($value)
+    {
+        $this->attributes['modelo'] = strtoupper($value);
+    }
+    public function setColorAttribute($value)
+    {
+        $this->attributes['color'] = ucfirst($value);
+    }
 }
