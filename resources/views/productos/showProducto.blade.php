@@ -18,6 +18,10 @@
         <h5>En stock: </h5>
         <h6>{{ $producto->stock }}</h6>
         <hr>
+        <h5>Categoría: </h5>
+        @foreach($producto->categorias as $categoria)
+            <h6>{{ $categoria->nombre }}</h6>
+        @endforeach
         <a class="btn btn-white btn-sm w-20 mb-0" href="\productos\{{ $producto->id }}\edit">Editar producto</a>
         <br><br>
         <form action="{{ route('productos.destroy', $producto) }}" method="POST">

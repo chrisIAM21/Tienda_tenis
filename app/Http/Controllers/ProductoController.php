@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use App\Models\Categoria;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -77,7 +78,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
-        //Retornamos la vista showProducto.blade.php
+        $producto = Producto::with('categorias')->find($producto->id);
         return view('productos.showProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id} | El compact es para pasarle el producto
     }
 
@@ -89,7 +90,9 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        return view('productos.editProducto', compact('producto')); // la ruta para ver en web sería: localhost:8000/productos/{id}/edit
+        $categorias = Categoria::all(); // Obtener todas las categorías
+        $producto->load('categorias'); // Cargar las categorías asociadas al producto
+        return view('productos.editProducto', compact('producto', 'categorias'));
     }
 
     /**
@@ -114,10 +117,12 @@ class ProductoController extends Controller
         $producto->stock = $request->stock;
         $producto->save();
         */
-        $producto::where('id', $producto->id)
-            ->update($request->except('_token', '_method'));
 
-        return redirect()->route('productos.edit', $producto)->with('exito', 'editado');
+        $producto->update($request->except('_token', '_method')); // Actualizar los campos del producto
+        $producto->categorias()->sync($request->input('categorias', [])); // Sincronizar las categorías
+        // $producto::where('id', $producto->id)->update($request->except('_token', '_method'));
+
+        return redirect()->route('productos.edit', $producto)->with('producto', 'editado');
         // return redirect()->route('productos.edit', $producto)->with('exito');
     }
 

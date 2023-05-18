@@ -50,7 +50,7 @@
             @enderror
             <br>
             <!-- Mensaje de éxito con sweetalert2 -->
-            @if (session('exito'))
+            @if (session('producto')=='creado')
                 <script>
                     Swal.fire({
                         icon: 'success',

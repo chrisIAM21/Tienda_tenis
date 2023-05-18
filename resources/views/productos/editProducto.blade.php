@@ -41,8 +41,20 @@
                 <h4>*{{ $message }}</h4>
             @enderror
             <br>
+
+            <label for="categorias">Categorías:</label>
+            @foreach ($categorias as $categoria)
+                <div>
+                    <input type="checkbox" name="categorias[]" value="{{ $categoria->id }}"
+                        {{ $producto->categorias->contains($categoria->id) ? 'checked' : '' }}>
+                    <label>{{ $categoria->nombre }}</label>
+                </div>
+            @endforeach
+
+
+
             <!-- Mensaje de éxito con sweetalert2 -->
-            @if (session('exito')=='editado')
+            @if (session('producto') == 'editado')
                 <script>
                     Swal.fire({
                         icon: 'success',
