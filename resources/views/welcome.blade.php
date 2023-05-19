@@ -5,7 +5,7 @@
     <x-slot name="header">
         <!-- Imagen de fondo -->
         <div class="page-header min-vh-75 relative"
-            style="background-image: url('layout-inicio/assets/img/inicio/img_inicio_02.jpg')">
+            style="background-image: url('layout-inicio/assets/img/inicio/img_inicio_oscuro.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-center mx-auto">

@@ -24,22 +24,25 @@ class ArchivoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'archivo' => 'required|mimes:pdf,docx,xlsx,jpg,jpeg,png|max:2048',
+            'archivos' => 'required|array',
+            'archivos.*' => 'mimes:jpg,jpeg,png,pdf|max:5120',
         ]);
-        if ($request->hasFile('archivo') && $request->file('archivo')->isValid()) {
-            $ruta = $request->archivo->store('archivos', 'public');
-
-            // Crear registro en tabla archivos
-            Archivo::create([
-                'hash' => $ruta,
-                // Obtener nombre del archivo sin extensión
-                'nombre' => pathinfo($request->archivo->getClientOriginalName(), PATHINFO_FILENAME),
-                'extension' => $request->archivo->extension(),
-                'mime' => $request->archivo->getMimeType(),
-            ]);
+        if ($request->hasFile('archivos')) {
+            foreach ($request->file('archivos') as $archivo) {
+                if ($archivo->isValid()) {
+                    $ruta = $archivo->store('archivos', 'public');
+                    
+                    // Crear registro en tabla archivos
+                    Archivo::create([
+                        'hash' => $ruta,
+                        'nombre' => pathinfo($archivo->getClientOriginalName(), PATHINFO_FILENAME),
+                        'extension' => $archivo->extension(),
+                        'mime' => $archivo->getMimeType(),
+                    ]);
+                }
+            }
             return redirect()->route('archivos.index')->with('archivo', 'subido');
         }
-        return redirect()->route('archivos.index')->with('archivo', 'error');
     }
 
     public function destroy(Archivo $archivo)
