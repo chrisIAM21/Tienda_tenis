@@ -138,4 +138,12 @@ class ProductoController extends Controller
         // redirige a la ruta productos.index despues de mostrar el mensaje
         return redirect()->route('productos.index')->with('producto', 'eliminado');
     }
+
+    public function realizarConsulta()
+    {
+        $productos = Producto::all();
+
+        // Devolver la respuesta en formato JSON
+        return response()->json($productos);
+    }
 }

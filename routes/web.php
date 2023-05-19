@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ArchivoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,18 @@ Route::delete('/categorias/{categoria}/quitar-productos', [CategoriaController::
 
 # Ruta para poder seleccionar y enlazar los productos a una categoria específica (el método en el controlador es public function agregarProductos(Request $request, Categoria $categoria))
 Route::post('categorias/{categoria}/agregarProductos', [CategoriaController::class, 'agregarProductos'])->name('categorias.agregarProductos');
+
+# Ruta para realizar una consulta de los productos y devolver un JSON
+Route::get('/consulta', [ProductoController::class, 'realizarConsulta']);
+
+Route::get('archivos/descargar/{archivo}', [ArchivoController::class, 'descargar'])->name('archivos.descargar');
+Route::resource('archivos', ArchivoController::class);
+Route::post('/archivos/{archivo}/relacionar', [ArchivoController::class, 'relacionar'])->name('archivos.relacionar');
+Route::delete('/archivos/{archivo}/desenlazar', [ArchivoController::class, 'desenlazar'])->name('archivos.desenlazar');
+Route::put('archivos/{archivo}/reemplazar', [ArchivoController::class, 'reemplazar'])->name('archivos.reemplazar');
+
+// Ruta para ver imagenes de storage/archivos/ejemplo.png
+Route::get('/storage/{archivo}', function ($archivo) {
+    $rutaArchivo = storage_path('app/archivos/' . $archivo);
+    return response()->file($rutaArchivo);
+});

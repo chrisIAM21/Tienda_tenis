@@ -13,11 +13,17 @@ class Producto extends Model
     public $timestamps = false;
     protected $fillable = ['marca', 'modelo', 'color', 'stock'];
 
+    // Relacion de muchos a muchos
     public function categorias()
     {
         return $this->belongsToMany(Categoria::class);
     }
-    
+    // Relacion de uno a muchos
+    public function archivos()
+    {
+        return $this->hasMany(Archivo::class);
+    }
+
     // Accessors
     public function getMarcaAttribute($value)
     {
