@@ -20,8 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('productos', ProductoController::class);
-
 Route::middleware([ //Middleware para proteger las rutas, esto se creó cuando se ejecutó el comando php artisan make:auth
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -30,6 +28,7 @@ Route::middleware([ //Middleware para proteger las rutas, esto se creó cuando s
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::resource('productos', ProductoController::class);
 });
 
 Route::resource('categorias', CategoriaController::class);
@@ -47,7 +46,6 @@ Route::post('/archivos/{archivo}/relacionar', [ArchivoController::class, 'relaci
 Route::delete('/archivos/{archivo}/desenlazar', [ArchivoController::class, 'desenlazar'])->name('archivos.desenlazar');
 Route::put('archivos/{archivo}/reemplazar', [ArchivoController::class, 'reemplazar'])->name('archivos.reemplazar');
 
-// Ruta para ver imagenes de storage/archivos/ejemplo.png
 Route::get('/storage/{archivo}', function ($archivo) {
     $rutaArchivo = storage_path('app/archivos/' . $archivo);
     return response()->file($rutaArchivo);

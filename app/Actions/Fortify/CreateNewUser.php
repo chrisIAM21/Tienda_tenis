@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
 
+// Controlador para crear un nuevo usuario
 class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
