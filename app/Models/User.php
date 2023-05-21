@@ -18,6 +18,12 @@ class User extends Authenticatable implements MustVerifyEmail
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    // Relacion de uno a muchos
+    public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
