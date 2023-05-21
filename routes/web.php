@@ -28,6 +28,10 @@ Route::middleware([ //Middleware para proteger las rutas, esto se creó cuando s
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    // Route::resource('productos', ProductoController::class);
+});
+
+Route::middleware(['auth', 'can:admin'])->group(function () {
     Route::resource('productos', ProductoController::class);
 });
 
