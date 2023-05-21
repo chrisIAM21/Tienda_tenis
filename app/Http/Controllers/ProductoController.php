@@ -147,4 +147,12 @@ class ProductoController extends Controller
         // Devolver la respuesta en formato JSON
         return response()->json($productos);
     }
+
+    // Método para pasar los productos a la vista en inicio.catalogo
+
+    public function catalogo()
+    {
+        $productos = Producto::all();
+        return view('inicio.catalogo', compact('productos')); 
+    }
 }

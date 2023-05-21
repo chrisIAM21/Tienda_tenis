@@ -62,3 +62,5 @@ Route::get('/registro', function() {
 Route::get('/iniciar-sesion', function() {
     return view('iniciar-registrarse.iniciar-sesion');
 })->name('inicio-sesion');
+
+Route::get('/catalogo', [ProductoController::class, 'catalogo'])->name('catalogo');

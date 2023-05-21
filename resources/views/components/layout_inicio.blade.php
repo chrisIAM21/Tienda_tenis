@@ -90,7 +90,7 @@
                                             <div class="d-none d-lg-block">
                                                 <!-- Botón para mostrar todo el catálogo -->
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('catalogo')}}">
                                                         <!-- Enlace -->
                                                         <div class="d-flex">
                                                             <div class="icon h-10 me-3 d-flex mt-1">
@@ -110,7 +110,7 @@
 
 
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('catalogo')}}">
                                                         <!-- Enlace -->
                                                         <div class="d-flex">
                                                             <div class="icon h-10 me-3 d-flex mt-1">
@@ -131,18 +131,18 @@
                                                     </a>
                                                     <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
                                                         <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                            href="#">
+                                                        href="{{route('catalogo')}}">
                                                             Futbol
                                                         </a>
                                                         <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                            href="#">
+                                                        href="{{route('catalogo')}}">
                                                             Basketball
                                                         </a>
                                                     </div>
                                                 </li>
 
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('catalogo')}}">
                                                         <div class="d-flex">
                                                             <div class="icon h-10 me-3 d-flex mt-1">
                                                             </div>
@@ -162,11 +162,11 @@
                                                     </a>
                                                     <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
                                                         <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                            href="#">
+                                                        href="{{route('catalogo')}}">
                                                             Futbol
                                                         </a>
                                                         <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                            href="#">
+                                                        href="{{route('catalogo')}}">
                                                             Basketball
                                                         </a>
                                                     </div>
@@ -184,7 +184,7 @@
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
                                                                 <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                                    href="#">
+                                                                href="{{route('catalogo')}}">
                                                                     <!-- Enlace -->
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
@@ -200,7 +200,7 @@
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
                                                                 <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                                    href="#">
+                                                                href="{{route('catalogo')}}">
                                                                     <!-- Enlace -->
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
@@ -210,11 +210,11 @@
                                                         </div>
                                                     </div>
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="#">
+                                                        href="{{route('catalogo')}}">
                                                         Futbol
                                                     </a>
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="#">
+                                                        href="{{route('catalogo')}}">
                                                         Basketball
                                                     </a>
 
@@ -223,7 +223,7 @@
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
                                                                 <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                                    href="#">
+                                                                    href="{{route('catalogo')}}">
                                                                     <!-- Enlace -->
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
@@ -233,15 +233,15 @@
                                                         </div>
                                                     </div>
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="#">
+                                                        href="{{route('catalogo')}}">
                                                         Hombre
                                                     </a>
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="#">
+                                                        href="{{route('catalogo')}}">
                                                         Mujer
                                                     </a>
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="#">
+                                                        href="{{route('catalogo')}}">
                                                         Niño
                                                     </a>
 
