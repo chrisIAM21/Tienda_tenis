@@ -95,7 +95,8 @@
                                                         <div class="d-flex">
                                                             <div class="icon h-10 me-3 d-flex mt-1">
                                                             </div>
-                                                            <div class="w-100 d-flex align-items-center justify-content-between">
+                                                            <div
+                                                                class="w-100 d-flex align-items-center justify-content-between">
                                                                 <div>
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
@@ -260,37 +261,28 @@
                                         </li>
                                     @endauth
 
-                                    <!-- si el usuario está autenticado, se mostrará la opción para editar productos -->
+                                    <!-- si el usuario está autenticado y tiene rol de admin, se mostrará el botón para administrar productos -->
                                     @auth
-                                        <li class="nav-item mx-2">
-                                            <a class="nav-link nav-link-icon me-2" href="{{ route('productos.index') }}">
-                                                <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip"
-                                                    data-bs-placement="bottom">Aministrar productos</p>
-                                            </a>
-                                        </li>
+                                        @can('admin')
+                                            <li class="nav-item mx-2">
+                                                <a class="nav-link nav-link-icon me-2" href="{{ route('productos.index') }}">
+                                                    <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom">Aministrar productos</p>
+                                                </a>
+                                            </li>
+                                        @endcan
                                     @endauth
 
                                     <li class="nav-item my-auto ms-3 ms-lg-auto">
-                                        {{-- <!-- Si el usuario ya está autenticado, se mostrará la opción de cerrar sesión, sino, se muestra la opción de Registrarse -->
-                                        @if (Route::has('login'))
-                                            @auth
-                                                <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
-                                                    href="{{ route('logout') }}"
-                                                    onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                                    Cerrar sesión
-                                                </a>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                                    class="d-none">
-                                                    @csrf
-                                                </form>
-                                            @else --}}                                        
+                                        <!-- si no se ha iniciado sesión, se mostrará el botón para registrarse -->
                                         @if (Route::has('register'))
                                             @guest
-                                                <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0" href="/register">
+                                                <a class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                    href="/registro">
                                                     <i class="now-ui-icons">
-                                                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 16 21"
-                                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="16" width="21">
+                                                        <svg fill="none" stroke="currentColor" stroke-width="1.5"
+                                                            viewBox="0 0 16 21" xmlns="http://www.w3.org/2000/svg"
+                                                            aria-hidden="true" height="16" width="21">
                                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                                 d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z">
                                                             </path>
@@ -324,20 +316,25 @@
                                         @if (Route::has('login'))
                                             @auth
                                                 <div class="dropdown">
-                                                    <a href="javascript:;" class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0"
-                                                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a href="javascript:;"
+                                                        class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                        id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
                                                         <i class="fa fa-user me-sm-1"></i>
                                                         <span>{{ Auth::user()->name }}</span>
-                                                        <img src="layout-inicio/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1" />
+                                                        <img src="layout-inicio/assets/img/down-arrow-dark.svg"
+                                                            alt="down-arrow" class="arrow ms-1" />
                                                     </a>
-                                    
+
                                                     <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
                                                         aria-labelledby="dropdownMenuButton">
                                                         <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                                                            <a class="dropdown-item py-2 ps-3 border-radius-md" href="/user/profile">
+                                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                                href="/user/profile">
                                                                 <div class="d-flex py-1">
                                                                     <div class="my-auto">
-                                                                        <img src="/admin-layout/assets/img/team-2.jpg" class="avatar avatar-sm me-3">
+                                                                        <img src="/admin-layout/assets/img/team-2.jpg"
+                                                                            class="avatar avatar-sm me-3">
                                                                     </div>
                                                                     <div class="d-flex flex-column justify-content-center">
                                                                         <h6 class="text-sm font-weight-normal mb-1">
@@ -348,14 +345,17 @@
                                                             </a>
                                                         </li>
                                                         <li class="mb-2">
-                                                            <a class="dropdown-item border-radius-md" href="{{ route('logout') }}"
+                                                            <a class="dropdown-item border-radius-md"
+                                                                href="{{ route('logout') }}"
                                                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                                                 <div class="d-flex py-1">
                                                                     <div class="d-flex flex-column justify-content-center">
                                                                         <h6 class="text-sm font-weight-normal mb-1">
-                                                                            <span class="font-weight-bold">Cerrar sesión</span>
+                                                                            <span class="font-weight-bold">Cerrar
+                                                                                sesión</span>
                                                                         </h6>
-                                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                                        <form id="logout-form"
+                                                                            action="{{ route('logout') }}" method="POST"
                                                                             class="d-none">
                                                                             @csrf
                                                                         </form>
@@ -366,7 +366,8 @@
                                                     </ul>
                                                 </div>
                                             @else
-                                                <a class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0" href="/login">
+                                                <a class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                                    href="/iniciar-sesion">
                                                     <i class="fa fa-user me-sm-1"></i>
                                                     <span>Iniciar sesión</span>
                                                 </a>

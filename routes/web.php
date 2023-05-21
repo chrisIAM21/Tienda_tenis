@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ArchivoController;
+use Laravel\Jetstream\Rules\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,10 @@ Route::get('/storage/{archivo}', function ($archivo) {
     $rutaArchivo = storage_path('app/archivos/' . $archivo);
     return response()->file($rutaArchivo);
 });
+
+Route::get('/registro', function() {
+    return view('iniciar-registrarse.registro');
+})->name('registro');
+Route::get('/iniciar-sesion', function() {
+    return view('iniciar-registrarse.iniciar-sesion');
+})->name('inicio-sesion');

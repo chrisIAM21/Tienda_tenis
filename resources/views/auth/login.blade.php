@@ -43,7 +43,9 @@
                     {{ __('Iniciar sesión') }}
                 </x-button>
             </div>
-            <!-- Botón de regreso a inicio -->
+            <div class="flex items-center justify-end mt-4">
+                <a href="/register" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Si aun no tienes una cuenta, regístrate!</a>
+            </div>
             <div class="flex items-center justify-end mt-4">
                 <a href="/" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Regresar a página de inicio</a>
             </div>
