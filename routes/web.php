@@ -39,11 +39,11 @@ Route::middleware(['auth', 'can:admin'])->group(function () {
 Route::resource('categorias', CategoriaController::class);
 Route::delete('/categorias/{categoria}/quitar-productos', [CategoriaController::class, 'quitarProductos'])->name('categorias.quitarProductos');
 
-# Ruta para poder seleccionar y enlazar los productos a una categoria específica (el método en el controlador es public function agregarProductos(Request $request, Categoria $categoria))
+# Ruta para poder seleccionar y enlazar los productos a una categoria específica
 Route::post('categorias/{categoria}/agregarProductos', [CategoriaController::class, 'agregarProductos'])->name('categorias.agregarProductos');
 
 # Ruta para realizar una consulta de los productos y devolver un JSON
-Route::get('/consulta', [ProductoController::class, 'realizarConsulta']);
+Route::get('/consulta', [ProductoController::class, 'realizarConsulta'])->name('productos.consulta');
 
 Route::get('archivos/descargar/{archivo}', [ArchivoController::class, 'descargar'])->name('archivos.descargar');
 Route::resource('archivos', ArchivoController::class);

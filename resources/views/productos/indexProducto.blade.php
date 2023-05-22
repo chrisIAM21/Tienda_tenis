@@ -82,8 +82,10 @@
                 </tbody>
             </table>
         </div>
-        <a href={{ route('productos.create') }} class="btn btn-outline-secondary btn-sm w-20 m-4">Agregar Producto
+        <a href={{ route('productos.create') }} class="btn bg-gradient-dark w-20 my-4 m-5">Agregar Producto
             Nuevo</a>
+            <!-- consulta JSON -->
+        <a href={{ route('productos.consulta') }} class="btn btn-outline-secondary btn-sm w-20 m-4">Consultar Productos JSON</a>
     </div>
 
 </x-admin-layout>

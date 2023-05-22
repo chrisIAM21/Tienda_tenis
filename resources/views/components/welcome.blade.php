@@ -6,7 +6,13 @@
     </h1>
 
     <p class="mt-6 text-gray-500 leading-relaxed">
-        En el menú superior podrás dirigirte a la lista de productos, así como editarlos, agregar más, entre otras opciones... <br>También podrás ver tu perfil, y editar tu información personal.
+        En el menú superior podrás dirigirte a la lista de productos
+        @auth
+            @can('admin')
+            , así como editarlos, agregar más, entre otras opciones...
+            @endcan
+        @endauth
+         <br>También podrás ver tu perfil, y editar tu información personal.
     </p>
 </div>
 
