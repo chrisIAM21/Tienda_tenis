@@ -7,6 +7,28 @@
         echo '<li class="breadcrumb-item text-sm text-dark active" aria-current="page">' . ucfirst(str_replace('.php', '', $currentPage)) . '</li>';
         ?>
     </x-slot>
+    <!-- Mensaje de éxito al elimnar categoría con sweetalert2 -->
+    @if (session('categoria') == 'eliminada')
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Categoría eliminada correctamente',
+                showConfirmButton: true,
+                timer: 3000
+            })
+        </script>
+        @elseif (session('categoria') == 'creada')
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Categoría creada correctamente',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        </script>
+    @endif
+
+
     <div class="card-body px-0 pt-0 pb-2">
         <div class="table-responsive p-0">
             <table class="table align-items-center mb-0">

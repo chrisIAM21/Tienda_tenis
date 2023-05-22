@@ -44,7 +44,7 @@ class CategoriaController extends Controller
 
         Categoria::create($request->all());
 
-        return redirect('/categorias')->with('mensaje', 'Categoria creada con éxito!');
+        return redirect('/categorias')->with('categoria', 'creada');
     }
 
     /**
@@ -86,7 +86,7 @@ class CategoriaController extends Controller
         $categoria::where('id', $categoria->id)
             ->update($request->except('_token', '_method'));
 
-        return redirect('/categorias/'.$categoria->id)->with('mensaje', 'Categoria actualizada con éxito!');
+        return redirect('/categorias/'.$categoria->id)->with('categoria', 'editada');
     }
 
     /**
@@ -98,7 +98,7 @@ class CategoriaController extends Controller
     public function destroy(Categoria $categoria)
     {
         $categoria->delete();
-        return redirect()->route('categorias.index');
+        return redirect()->route('categorias.index')->with('categoria', 'eliminada');
     }
 
     public function agregarProductos(Request $request, Categoria $categoria)

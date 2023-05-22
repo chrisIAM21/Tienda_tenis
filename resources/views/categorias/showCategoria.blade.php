@@ -10,6 +10,16 @@
     </x-slot>
     <div class="card-body px-5 pt-2 pb-2">
 
+        @if (session('categoria') == 'editada')
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Categoría editada correctamente',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        </script>
+        @endif
 
         <form method="POST" action="{{ route('categorias.agregarProductos', $categoria) }}">
             @csrf
